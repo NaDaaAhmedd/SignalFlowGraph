@@ -30,7 +30,7 @@ public class Graph {
         adjlist.get(from).add(new Edge(from, to, weight));
     }
 
-    public void findpaths(int s) {
+    private void findpaths(int s) {
         isVisited[s] = true;
         if (s == end) {
             allpaths.add((ArrayList<Edge>) path.clone());
@@ -155,7 +155,7 @@ public class Graph {
         return delta;
     }
 
-    public void solve(int idx) {
+    private void solve(int idx) {
         if (idx == size) {
             boolean flag = true;
             if (list.size() == 1 || list.size() == 0)
